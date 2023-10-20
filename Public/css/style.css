@@ -1,0 +1,306 @@
+
+
+
+.input{
+    border: 1px solid var(--accent2);
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+#form.hide{
+    display: none;
+}
+#form{
+    margin: 0 auto;
+    width: 450px;
+    border: 1px solid var(--accent);
+    display: flex;
+    height: 500px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    appearance: none;
+    font-size: 26px;
+    background-color: var(--bg-black);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}  
+.pontos{
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 20px;
+}
+
+.record{
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 0 0 0;
+    display: none;
+}
+.record.show{
+    display: block;
+}
+
+#verifique{
+    margin: 10px 0px;
+    outline: none;
+    border: 1px solid var(--accent);
+    background-color: rgba(255, 220, 44, 0.233);
+    color: white;
+    cursor: pointer;
+}
+
+.iniciar{
+    position: relative;
+    margin: 0 auto;
+    width: 450px;
+    border: 1px solid var(--accent);
+    display: flex;
+    height: 500px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--bg-black);
+}
+.iniciar.hide{
+    display: none;
+}
+
+.inic-welcome{
+    color: var(--accent);
+    text-decoration: underline;
+    text-align: center;
+    font-size: 18px;
+    margin: 40px 0 10px 0;
+}
+.inic-select{
+    color: white;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.inic-btn{
+    font-size: 16px;
+    z-index: 2;
+    position: relative;
+    background-color: var(--bg-sec);
+    border: 1px solid var(--accent2);
+    border-radius: 30px;
+    width: 212px;
+    height: 60px;
+    cursor: pointer;
+    color: var(--primary);
+    margin: 6px 0;
+    outline: none;
+}
+
+.numeros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#n1, #n2{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 1rem;
+    width: 40%;
+    height: 80px;
+    text-align: center;
+    font-family:cursive;
+}
+#resp{
+    width: 30%;
+    height: 80px;
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+#nickuser{
+    border: 1px solid var(--accent);
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+.placar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: absolute;
+    top: 10.5%;
+    left: 4%;
+    width: 20vw;
+    height: 400px;
+    background-color:var(--bg-black);
+    border: 1px solid var(--accent);
+    padding: 5px;
+    transform: translateX(-50vw);
+    transition: .5s ease-in-out;
+    overflow-y: auto;
+}
+
+.placar.show{
+    transform: translateX(0);
+}
+
+.placar>p{
+    text-align: center;
+    color: var(--accent);
+}
+
+#sub-placar{
+    font-size: 10px;
+    color: var(--secondary);
+    margin: 0 auto;
+    width: 15vw;
+}
+
+.placar-inside{
+    list-style-type: square;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 2px 0;
+}
+.placar-inside>li{
+    margin: 8px 0;
+    transition: all .5s ease-out;
+}
+
+.inic-historic-show{
+    position: absolute;
+    left: 3%;
+    bottom: -1%;
+    font-size: 10px;
+    color: var(--secondary);
+    cursor: pointer;
+}
+.inic-historic-show::first-letter{
+    border: 1px solid red;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+
+li.acertou:hover{
+    color: transparent;
+}
+
+li.acertou:hover::marker{
+    color: var(--primary);
+
+}
+li.acertou::before{
+    content: "Concluiu sem erros";
+    font-size: 14px;
+    background-color: rgba(0, 128, 0, 0.478);
+    position: absolute;
+    padding: 2px 15px;
+    border-radius: 20px;
+    color: var(--primary);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+li.acertou:hover::before{
+    
+    opacity: 2;
+
+}
+
+li.errou:hover{
+    color: transparent;
+}
+
+li.errou:hover::marker{
+    color: var(--primary);
+
+}
+li.errou::before{
+    content: "Falhou no calculo";
+    font-size: 14px;
+    background-color: rgba(255, 0, 0, 0.376);
+    position: absolute;
+    padding: 2px 20px;
+    border-radius: 20px;
+    color: var(--primary);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+li.errou:hover::before{
+
+    opacity: 2;
+
+}
+
+.inic-btn::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    z-index: -3;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    border-radius: 33px;
+    filter: blur(3px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation: brilhar 10s infinite linear;
+    opacity: 0;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    transition: opacity 0.25s ease-in;
+}
+
+.inic-btn:hover::before{
+    opacity: 1;
+    color: var(--primary);
+}
+
+.inic-btn:active{
+    background-color: var(--bg-sec);
+    color: var(--primary);
+}
+
+.inic-btn:active::after{
+    background-color: transparent;
+}
+
+.inic-btn::after {
+    content: '';
+    z-index: -2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-sec);
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+
+
+.placar>.inic-btn{
+    height: 30px;
+    width: 60%;
+    font-size: 10px;
+}
+.placar>.inic-btn::after{
+        background-color: red;
+}
+.placar>.inic-btn:active::after{
+        background-color: transparent;
+}
+
+
+@keyframes brilhar {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

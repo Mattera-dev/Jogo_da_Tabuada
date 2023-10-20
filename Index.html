@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Tabuada</title>
+    <link rel="stylesheet" href="Public/css/style.css">
+    <link rel="stylesheet" href="Public/css/global.css">
+    <script src="Public/js/Jquery.js"></script>
+</head>
+<body>
+    <p class="pontos">
+        JOGO DE TABUADA
+        <h6 class="record" >Recorde atual: 0</h6>
+    </p>
+
+    <div class="iniciar">
+        <p class="inic-welcome">Boas-vindas ao jogo de tabuada</p>
+        <p class="inic-select">Digite o seu nome antes de inicar</p>
+        <input type="text" autocomplete="off" name="nick" id="nickuser" placeholder="Digite seu nome">
+        <p class="inic-select">Selecione o tempo de jogo abaixo</p>
+        <button class="inic-btn" value="1" onclick="cronometro(this)" type="button">15 Seg</button>
+        <button class="inic-btn" value="2" onclick="cronometro(this)" type="button">30 Seg</button>
+        <button class="inic-btn" value="3" onclick="cronometro(this)" type="button">60 Seg</button>
+        <h2 class="inic-historic-show" onclick="placa2()">
+           X Mostrar\fechar historico
+        </h2>
+    </div>
+
+    <form id="form" autocomplete="off" class="hide">
+        <div class="numeros">
+
+            <input type="number" name="n1" id="n1" class="input" readonly>
+            X
+            <input type="number" name="n2" id="n2" class="input" readonly>
+        </div>
+    =
+    <input type="number" name="resp" id="resp" class="input">
+    <input type="button" value="Conferir" id="verifique">
+
+    <p id="tempo"></p>
+    </form>
+
+
+    <div class="placar">
+        <p>HISTORICO DE JOGOS</p>
+        <p id="sub-placar">Passe o mouse sobre um registro para detalhes de vitoria/perda</p>
+        <button class="inic-btn" onclick="limpar()">Limpar historico</button>
+        <ul class="placar-inside">
+        </ul>
+    </div>
+
+    <!-- CRIADO POR VINICIUS MATTERA -->
+
+    <!-- Contato:
+         Email: vinimatteraz@gmail.com
+        Whatsapp: 5511917898932
+        Instagram: @Mattera_boyy -->
+<script src="Public/js/app.js"></script>
+</body>
+</html>
